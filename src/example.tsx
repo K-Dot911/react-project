@@ -166,16 +166,16 @@ const someValue2 = neveFn2()
 
 //Generics
 
-const myArray: Array<number> = [1,2,3];
-
-
-interface MyArray<T> {
-    [N: number]: T
-    map<U>(fn: (el: T, index: number, arr: MyArray<T>) => U): U[]
-}
-
-myArray.map((f, index, arr) => f + 1); // [2,3,4]
-myArray.map((f) => `f + ${f}`); // ['f + 1', 'f + 2' ...]
+// const myArray: Array<number> = [1,2,3];
+//
+//
+// interface MyArray<T> {
+//     [N: number]: T
+//     map<U>(fn: (el: T, index: number, arr: MyArray<T>) => U): U[]
+// }
+//
+// myArray.map((f, index, arr) => f + 1); // [2,3,4]
+// myArray.map((f) => `f + ${f}`); // ['f + 1', 'f + 2' ...]
 
 
 // const myNewArray = [1, 2, 3]
