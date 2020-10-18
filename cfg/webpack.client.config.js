@@ -34,7 +34,7 @@ module.exports = {
             use: ['ts-loader']
             },
             {
-            test: /\.css$/,
+            test: /\.scss$/,
             use: [
                 'style-loader', {
                     loader: "css-loader",
@@ -44,7 +44,8 @@ module.exports = {
                             localIdentName: '[name]__[local]--[hash:base64:5]',
                         }
                     }
-                }
+                },
+                'sass-loader',
             ],
             }
         ]
