@@ -8,8 +8,10 @@
     position: relative;
 }
 
-.card > * {
-    flex: 1 1 100%;
+@media all and (min-width: 1024px) {
+    .card {
+        flex-flow: row;
+    }
 }
 
 .metaData {
@@ -42,11 +44,23 @@
     text-decoration: none;
 }
 
-.createdAt {
+.createdAt,
+.publishedLabel {
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
     color: var(--grey99);
+}
+
+.publishedLabel {
+    display: none;
+    margin-right: 4px;
+}
+
+@media all and (min-width: 1024px) {
+    .publishedLabel {
+        display: inline-block;
+    }
 }
 
 .title {
@@ -69,11 +83,18 @@
     max-height: 178px;
 }
 
+@media all and (min-width: 1024px) {
+    .preview {
+        order: -1;
+    }
+}
+
 .previewImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 
 .menuButton {
     width: 31px;
@@ -90,6 +111,12 @@
     top: 30px;
 }
 
+@media all and (min-width: 1024px) {
+    .actions {
+        display: none;
+    }
+}
+
 .menuButton:active,
 .menuButton:hover {
     background-color: rgba(51, 51, 51, 0.1);
@@ -100,6 +127,8 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .up {
@@ -116,4 +145,36 @@
 
 .down {
     margin-right: 4px;
+}
+
+.commentsButton {
+    display: flex;
+    align-items: normal;
+}
+
+@media all and (min-width: 1024px) {
+    .commentsButton {
+        display: none;
+    }
+}
+
+.commentsButton * {
+    color: var(--greyC4);
+}
+
+.commentsNumber {
+    padding: 0 0 0 6px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.shareButton {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.shareButton {
+    width: 20px;
+    height: 20px;
 }
