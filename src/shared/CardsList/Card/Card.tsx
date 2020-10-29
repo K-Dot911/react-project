@@ -4,8 +4,7 @@ import styles from './card.css';
 export function Card() {
     return (
         <li className={styles.card}>
-            <div className={styles.texContent}>
-
+            <div className={styles.textContent}>
                 <div className={styles.metaData}>
                     <div className={styles.userLink}>
                         <img className={styles.avatar}

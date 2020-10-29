@@ -9,10 +9,46 @@
 }
 
 @media all and (min-width: 1024px) {
+
     .card {
         flex-flow: row;
+        justify-content: space-between;
     }
 }
+
+@media all and (min-width: 1540px) {
+
+    .card {
+        padding: 0 60px;
+    }
+
+    .card:hover, car:focus-within {
+        outline: 1px solid var(--greyD9);
+    }
+
+    .card:hover h2 a, .card:focus-within h2 a {
+        color: var(--orange);
+    }
+}
+
+
+@media all and (min-width: 1024px) {
+    .textContent {
+        align-items: self-end;
+        justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-basis: 100%;
+        padding: 0 40px;
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .textContent {
+        padding: 0 60px;
+    }
+}
+
 
 .metaData {
     display: flex;
@@ -22,11 +58,24 @@
     margin-bottom: 7px;
 }
 
+@media all and (min-width: 1024px) {
+    .metaData {
+        flex-direction: row-reverse;
+    }
+}
+
+
 .userLink {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: 4px;
+}
+
+@media all and (min-width: 1540px) {
+    .userLink:hover a {
+        text-decoration: underline;
+    }
 }
 
 .avatar {
@@ -44,6 +93,13 @@
     text-decoration: none;
 }
 
+@media all and (min-width: 1540px) {
+    .username {
+        position: relative;
+        z-index: 1;
+    }
+}
+
 .createdAt,
 .publishedLabel {
     font-weight: normal;
@@ -51,6 +107,13 @@
     line-height: 14px;
     color: var(--grey99);
 }
+
+@media all and (min-width: 1024px) {
+    .createdAt {
+        margin-right: 10px;
+    }
+}
+
 
 .publishedLabel {
     display: none;
@@ -79,6 +142,26 @@
     margin-bottom: 13px;
 }
 
+
+@media all and (min-width: 1024px) {
+    .postLink {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .postLink:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottem: 0;
+    }
+}
+
+
 .preview {
     max-height: 178px;
 }
@@ -86,6 +169,7 @@
 @media all and (min-width: 1024px) {
     .preview {
         order: -1;
+        max-width: 190px;
     }
 }
 
@@ -111,15 +195,31 @@
     top: 30px;
 }
 
+.menuButton:active,
+.menuButton:hover {
+    background-color: rgba(51, 51, 51, 0.1);
+}
+
+
+@media all and (min-width: 1024px) {
+    .menuButton {
+        right: 120px;
+        top: calc(50% - 16px);
+        transform: rotate(180deg);
+    }
+}
+
+
+@media all and (min-width: 1540px) {
+    .menuButton:hover {
+        background-color: rgba(51, 51, 51, 0.1);
+    }
+}
+
 @media all and (min-width: 1024px) {
     .actions {
         display: none;
     }
-}
-
-.menuButton:active,
-.menuButton:hover {
-    background-color: rgba(51, 51, 51, 0.1);
 }
 
 .controls {
@@ -129,6 +229,35 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+@media all and (min-width: 1024px) {
+    .controls {
+        width: auto;
+    }
+}
+@media all and (min-width: 1540px) {
+    .controls {
+        position: relative;
+    }
+}
+
+
+@media all and (min-width: 1024px) {
+    .karmaCounter {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .karmaCounter > button.up:hover > svg > path {
+        fill: var(--green);
+    }
+
+    .karmaCounter > button.down:hover > svg > path {
+        fill: var(--orange);
+    }
 }
 
 .up {
@@ -178,3 +307,4 @@
     width: 20px;
     height: 20px;
 }
+
