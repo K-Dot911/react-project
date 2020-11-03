@@ -2,17 +2,21 @@ import React from 'react';
 import styles from './genericlist.css';
 
 interface IItem {
- example: string;
+ value: string;
+ id: string;
+ onClick: (id: string) => void;
 }
 
-interface IGenericListProps {
+interface IMyListProps {
   list: IItem[];
 }
 
-export function GenericList({ list }:IGenericListProps) {
+export function MyList({ list }: IMyListProps) {
   return (
-    <ul className={styles.genericlist}>
-      {list}
+    <ul>
+        {list.map((item) => (
+            <li onClick={() => item.onClick(item.id)} key={item.id}>{item.value}</li>
+        ))}
     </ul>
   );
 }
