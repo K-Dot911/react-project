@@ -4,10 +4,12 @@ import styles from './genericlist.css';
 interface IItem {
  id: string;
  text: string;
- onClick: (id: string) => void;
+ onClick?: (id: string) => void;
  className?: string;
  As?: 'a' | 'li' | 'button' | 'div';
  href?: string;
+ icon?: string;
+ Al?: any;
 }
 
 interface IGenericListProps {
