@@ -1,0 +1,49 @@
+.card {
+    background-color: var(--white);
+    border-right: 7px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+@media all and (min-width: 1024px) {
+
+    .card {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+}
+
+@media all and (min-width: 1540px) {
+
+    .card {
+        padding: 0 60px;
+    }
+
+    .card:hover, car:focus-within {
+        outline: 1px solid var(--greyD9);
+    }
+
+    .card:hover h2 a, .card:focus-within h2 a {
+        color: var(--orange);
+    }
+}
+
+.preview {
+    max-height: 178px;
+}
+
+@media all and (min-width: 1024px) {
+    .preview {
+        order: -1;
+        max-width: 190px;
+    }
+}
+
+.previewImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

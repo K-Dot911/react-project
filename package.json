@@ -35,10 +35,15 @@
     "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "D": "^1.0.0",
     "express": "^4.17.1",
+    "generator-react-ts-component-dir": "^1.0.0",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "require.js": "^1.0.0"
+    "require.js": "^1.0.0",
+    "yo": "^3.1.1"
   }
 }
