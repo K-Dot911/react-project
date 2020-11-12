@@ -8,8 +8,6 @@ interface IItem {
  className?: string;
  As?: 'a' | 'li' | 'button' | 'div';
  href?: string;
- icon?: string;
- Al?: any;
 }
 
 interface IGenericListProps {

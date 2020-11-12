@@ -44,34 +44,3 @@
         background-color: rgba(51, 51, 51, 0.1);
     }
 }
-
-.menuList {
-    min-width: 157px;
-    background: var(--white);
-    border-radius: 3px;
-    padding: 0 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 3px;
-    position: absolute;
-    right: 0;
-    top: 10px;
-}
-
-.menuList li {
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--grey99);
-    padding: 10px 0 10px 20px;
-    border-bottom: 1px solid #ECECEC;
-    cursor: pointer;
-}
-
-.menuList li:last-child {
-    background-color: var(--grey99);
-    color: var(--grey66);
-    margin: 0 -20px;
-    border-radius: 0 0 3px 3px;
-    text-align: center;
-    padding: 10px 0;
-}
-
