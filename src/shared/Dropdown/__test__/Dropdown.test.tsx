@@ -1,3 +1,8 @@
+/**
+ * @jest-enviroment jsdom
+ */
+
+
 import React from "react";
 import {Dropdown} from "../Dropdown";
 import {shallow} from "enzyme";
