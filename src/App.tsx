@@ -14,9 +14,6 @@ function AppComponent() {
            <Content>
               <CardsList />
               <br/>
-              <Text size={20} mobileSize={28} bold={true}>Label 1</Text>
-               <Text size={20}>Label 2</Text>
-               <Text size={20} mobileSize={16}>Label 2</Text>
            </Content>
        </Layout>
 

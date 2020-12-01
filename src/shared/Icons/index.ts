@@ -4,3 +4,4 @@ export * from './MenuIcon';
 export * from './SharedIcon';
 export * from './SavedIcon';
 export * from './MaskIcon';
+export * from './IconAnon';
