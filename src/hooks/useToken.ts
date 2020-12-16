@@ -7,7 +7,5 @@ export function useToken() {
             setToken(window.__token__);
         }
     }, [])
-
-    console.log(token)
     return [token]
 }
