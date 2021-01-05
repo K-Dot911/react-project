@@ -1,21 +1,32 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './card.css';
 import {TextContent} from "./TextContent"
 import {Menu} from "./Menu";
 import {Controls} from "./Controls";
 
-export function Card() {
+interface ICardsProps {
+    postData: any;
+}
+
+export function Card({postData}: ICardsProps) {
     return (
         <li className={styles.card}>
-            <TextContent />
+            <TextContent avatarUrl={postData.sr_detail.header_img}
+                         avatarAlt={postData.sr_detail.display_name}
+                         authorName={postData.author}
+                         postDate={postData.created_utc}
+                         postTitle={postData.title}
+                         postUrl={postData.url}
+                         postHint={postData.post_hint}
+
+            />
             <div className={styles.preview}>
-                <img className={styles.previewImg}
-                     src="https://cdn.dribbble.com/users/1421201/screenshots/14453037/media/264230b1f5a45f1ef74c005746d8ee9f.jpg"
-                     alt="post image"
-                />
+                {postData.post_hint === 'image' ? <img className={styles.previewImg} src={postData.url} /> : ''}
             </div>
             <Menu />
-            <Controls />
+            <Controls postComments={postData.num_comments}
+                      postKarma={postData.ups}
+            />
         </li>
     );
 }
