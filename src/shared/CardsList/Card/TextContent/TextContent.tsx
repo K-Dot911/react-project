@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './textcontent.css';
 import moment from 'moment'
+import {Title} from "./Title";
+import {Controls} from "../Controls";
 
 interface ITextContentInterface {
     avatarUrl: string;
@@ -28,11 +30,7 @@ export function TextContent({avatarUrl, avatarAlt, authorName, postDate, postTit
                         <span className={styles.publishedLabel}>опубликовано</span>
                     {moment(postDate).format("DD-MM-YYYY h:mm:ss")}</span>
             </div>
-            <h2 className={styles.title}>
-                {postHint === 'image' ? <span className={styles.postLink}>{postTitle}</span> : <a href={postUrl} className={styles.postLink}>
-                    {postTitle}
-                </a> }
-            </h2>
+         <Title  postHint={postHint} postTitle={postTitle}  postUrl={postUrl}/>
         </div>
     );
 }
