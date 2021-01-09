@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from './title.css';
+import {Post} from "../../../../Post";
 
 interface ITitleInterface {
   postHint: string;
@@ -19,7 +20,7 @@ export function Title({postHint, postTitle, postUrl}: ITitleInterface) {
         </a> }
 
         {isModalOpened && (
-            <div>Открытый пост</div>
+            <Post onClose={() => {setIsModalOpened(false);}} />
         )}
       </h2>
   );

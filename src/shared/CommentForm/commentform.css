@@ -1,0 +1,27 @@
+.input {
+    width: 100%;
+    resize: none;
+    min-height: 90px;
+    outline: none;
+    border: 1px solid var(--grey99);
+    background: var(--white);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 7px;
+    color: var(--grey99);
+    padding: 16px;
+}
+
+.button {
+    display: block;
+    margin-left: auto;
+    min-width: 220px;
+    min-height: 50px;
+    background: var(--orange);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--white);
+}

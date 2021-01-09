@@ -39,6 +39,7 @@
     .preview {
         order: -1;
         max-width: 190px;
+        margin-right: 40px;
     }
 }
 

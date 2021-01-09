@@ -21,7 +21,7 @@ export function TextContent({avatarUrl, avatarAlt, authorName, postDate, postTit
             <div className={styles.metaData}>
                 <div className={styles.userLink}>
                     <img className={styles.avatar}
-                         src={avatarUrl}
+                         src={avatarUrl ? avatarUrl : 'https://styles.redditmedia.com/t5_2qh4a/styles/communityIcon_z9ukzp0n9m021.png?width=256&s=7a29e3b7106333a479c6e3ce18e5945fbc8e0491'}
                          alt={avatarAlt}
                     />
                     <a href="#user-url" className={styles.username}>{authorName}</a>
