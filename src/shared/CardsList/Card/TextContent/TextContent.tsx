@@ -11,10 +11,11 @@ interface ITextContentInterface {
     postDate: string;
     postTitle: string;
     postUrl: string;
-    postHint: string
+    postHint: string;
+    postKarma: number;
 }
 
-export function TextContent({avatarUrl, avatarAlt, authorName, postDate, postTitle, postUrl, postHint}: ITextContentInterface) {
+export function TextContent({avatarUrl, avatarAlt, authorName, postDate, postTitle, postUrl, postHint, postKarma}: ITextContentInterface) {
 
     return (
         <div className={styles.textContent}>
@@ -30,7 +31,7 @@ export function TextContent({avatarUrl, avatarAlt, authorName, postDate, postTit
                         <span className={styles.publishedLabel}>опубликовано</span>
                     {moment(postDate).format("DD-MM-YYYY h:mm:ss")}</span>
             </div>
-         <Title  postHint={postHint} postTitle={postTitle}  postUrl={postUrl}/>
+         <Title  postHint={postHint} postTitle={postTitle} avatarUrl={avatarUrl} authorName={authorName} avatarAlt={avatarAlt} postUrl={postUrl} postDate={postDate} postKarma={postKarma}/>
         </div>
     );
 }

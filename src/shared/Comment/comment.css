@@ -1,0 +1,30 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar {
+    height: 20px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.lineWrapper {
+    margin-right: 20px;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.publishedLabel {
+    margin-right: 10px;
+}
+
+.userLink {
+    display: flex;
+    align-items: center;
+}

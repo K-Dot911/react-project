@@ -1,3 +1,10 @@
+.form {
+    border-top: 1px solid var(--grey99);
+    border-bottom: 1px solid var(--grey99);
+    padding: 70px 0;
+    margin-bottom: 53px;
+}
+
 .input {
     width: 100%;
     resize: none;

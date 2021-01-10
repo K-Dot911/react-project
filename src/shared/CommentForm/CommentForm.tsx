@@ -13,7 +13,6 @@ export function CommentForm() {
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
-    console.log(value);
   }
 
   return (

@@ -18,6 +18,7 @@ export function Card({postData}: ICardsProps) {
                          postTitle={postData.title}
                          postUrl={postData.url}
                          postHint={postData.post_hint}
+                         postKarma={postData.ups}
 
             />
             <div className={styles.preview}>

@@ -6,10 +6,14 @@ interface ITitleInterface {
   postHint: string;
   postTitle: string;
   postUrl: string;
-
+  avatarUrl: string;
+  avatarAlt: string;
+  authorName: string;
+  postDate: string;
+  postKarma: number;
 }
 
-export function Title({postHint, postTitle, postUrl}: ITitleInterface) {
+export function Title({postHint, postTitle, authorName, avatarAlt, avatarUrl, postDate, postKarma}: ITitleInterface) {
   const [isModalOpened, setIsModalOpened] = useState(false);
 
   return (
@@ -20,7 +24,7 @@ export function Title({postHint, postTitle, postUrl}: ITitleInterface) {
         </a> }
 
         {isModalOpened && (
-            <Post onClose={() => {setIsModalOpened(false);}} />
+            <Post onClose={() => {setIsModalOpened(false);}} authorName={authorName} avatarUrl={avatarUrl} avatarAlt={avatarAlt} postDate={postDate} postKarma={postKarma} postTitle={postTitle} />
         )}
       </h2>
   );
