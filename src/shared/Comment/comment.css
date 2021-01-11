@@ -15,16 +15,47 @@
 
 .contentWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .publishedLabel {
     margin-right: 10px;
 }
 
+.commentText {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
 .userLink {
     display: flex;
     align-items: center;
+    margin-right: 10px;
+}
+
+.headerWrapper {
+    display: flex;
+}
+
+.buttonSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.buttonDescription {
+    margin-right: 27px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--grey99);
+}
+
+.button svg {
+    margin-right: 6px;
 }
