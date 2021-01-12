@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './dropdown.css';
+import ReactDom from "react-dom";
 
 interface IDropDpwnProps {
     button: React.ReactNode;
@@ -12,6 +13,7 @@ interface IDropDpwnProps {
 const NOOP = () => {}
 
 export function Dropdown({button, children, isOpen, onOpen = NOOP, onClose = NOOP}: IDropDpwnProps) {
+
     const [isDropDownOpen, setIsDropDownOpen] = React.useState(isOpen);
     React.useEffect(() => setIsDropDownOpen(isOpen), [isOpen]);
     React.useEffect(() => isDropDownOpen  ? onOpen() : onClose(),[isDropDownOpen])

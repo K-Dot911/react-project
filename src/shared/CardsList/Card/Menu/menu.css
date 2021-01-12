@@ -1,8 +1,12 @@
 .menu {
-    position: absolute;
+    /*position: absolute;*/
     top: 17px;
     right: 15px;
     padding: 0;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-color: tomato;
 }
 
 @media all and (min-width: 1024px) {
