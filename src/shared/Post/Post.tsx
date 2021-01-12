@@ -80,7 +80,7 @@ export function Post({onClose, authorName, avatarAlt, avatarUrl, postKarma, post
       <p> In tincidunt placerat sem eu suscipit. Mauris commodo vestibulum arcu, dictum euismod quam dignissim non. Mauris at suscipit quam.</p>
     </div>
     <CommentForm />
-    <Comment/>
+    <Comment name={'Михаил Рогов'}/>
 
   </div>
   ), node);

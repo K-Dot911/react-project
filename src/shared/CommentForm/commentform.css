@@ -1,6 +1,6 @@
 .form {
-    border-top: 1px solid var(--grey99);
-    border-bottom: 1px solid var(--grey99);
+    border-top: 1px solid var(--greyD9);
+    border-bottom: 1px solid var(--greyD9);
     padding: 70px 0;
     margin-bottom: 53px;
 }
@@ -10,7 +10,7 @@
     resize: none;
     min-height: 90px;
     outline: none;
-    border: 1px solid var(--grey99);
+    border: 1px solid var(--greyD9);
     background: var(--white);
     font-weight: normal;
     font-size: 16px;
@@ -18,17 +18,20 @@
     border-radius: 7px;
     color: var(--grey99);
     padding: 16px;
+    margin-bottom: 10px;
 }
 
 .button {
     display: block;
     margin-left: auto;
-    min-width: 220px;
-    min-height: 50px;
+    padding: 10px;
+    border-radius: 4px;
     background: var(--orange);
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
     color: var(--white);
+    border: none;
 }
+

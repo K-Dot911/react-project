@@ -59,3 +59,10 @@
 .button svg {
     margin-right: 6px;
 }
+
+.button,
+.button:hover,
+.button:active {
+    outline: none;
+    border: none;
+}
