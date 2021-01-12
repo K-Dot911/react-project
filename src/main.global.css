@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+#dropdown_root {
+    position: absolute;
+    top: 237px;
+    right: 34px;
+}
+
+@media all and (min-width: 1024px) {
+    #dropdown_root {
+        top: 273px;
+        right: 27px;
+    }
+}
+
 :root {
     --black:          #333333;
     --orange:         #CC6633;

@@ -25,7 +25,7 @@ export function Card({postData}: ICardsProps) {
 
             />
             <div className={styles.preview}>
-                {postData.post_hint === 'image' ? <img className={styles.previewImg} src={postData.url} /> : ''}
+                {postData.post_hint === 'image' ? <img className={styles.previewImg} src={postData.url} /> : <img className={styles.previewImg} src='https://linkbuilder.su/images/uploads/glossary/ssilka.jpg'/>}
             </div>
             <Menu />
             <Controls postComments={postData.num_comments}

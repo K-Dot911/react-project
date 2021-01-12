@@ -12,6 +12,8 @@
     -webkit-box-orient: vertical;
     display: -webkit-box;
     margin-bottom: 13px;
+    min-height: 38px;
+    min-width: 360px;
 }
 
 

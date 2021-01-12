@@ -21,6 +21,7 @@
     justify-content: start;
     align-items: center;
     margin-bottom: 7px;
+    min-height: 31px;
 }
 
 @media all and (min-width: 1024px) {
