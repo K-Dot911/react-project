@@ -1,9 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 import ReactDom from 'react-dom';
 import styles from './post.css';
-import {CommentForm} from "../CommentForm";
 import moment from "moment";
 import {Comment} from "../Comment";
+import {CommentFormContainer} from "../CommentFormContainer";
 
 interface IPost {
     onClose?: () => void;
@@ -85,7 +85,7 @@ export function Post({onClose, authorName, avatarAlt, avatarUrl, postKarma, post
                 <p> In tincidunt placerat sem eu suscipit. Mauris commodo vestibulum arcu, dictum euismod quam dignissim
                     non. Mauris at suscipit quam.</p>
             </div>
-            <CommentForm/>
+            <CommentFormContainer/>
             <Comment name={'Михаил Рогов'}/>
 
         </div>

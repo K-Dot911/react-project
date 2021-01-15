@@ -44,6 +44,7 @@
   "dependencies": {
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.15",
     "D": "^1.0.0",
     "axios": "^0.21.0",
     "classnames": "^2.2.6",
@@ -52,6 +53,9 @@
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "require.js": "^1.0.0",
     "yo": "^3.1.1"
   }
