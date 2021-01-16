@@ -1,6 +1,7 @@
 import {useContext, useEffect, useState} from "react";
 import axios from "axios";
-import {tokenContext} from "../shared/context/tokenContext";
+import {useSelector} from "react-redux";
+import {RootState} from "../store";
 
 interface IPostData {
     posts?: [];
@@ -8,7 +9,7 @@ interface IPostData {
 
 export function usePostsData() {
     const [data, setData] = useState<IPostData>({})
-    const token = useContext(tokenContext)
+    const token = useSelector<RootState, string>(state => state.token);
 
     useEffect(() => {
         axios.get('https://www.reddit.com/r/popular/best.json?sr_detail=true', {
