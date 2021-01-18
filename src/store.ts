@@ -7,7 +7,7 @@ export type RootState = {
 
 const initialState = {
     commentText: 'Привет SkillBox',
-    token: 'token'
+    token: ''
 }
 
 const UPDATE_COMMENT = 'UPDATE_COMMENT'
