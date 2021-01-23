@@ -1,7 +1,7 @@
 import {useContext, useEffect, useState} from "react";
 import axios from "axios";
 import {useSelector} from "react-redux";
-import {RootState} from "../store";
+import {RootState} from "../store/reducer";
 
 interface IPostData {
     posts?: [];
@@ -13,7 +13,7 @@ export function usePostsData() {
 
     useEffect(() => {
         axios.get('https://www.reddit.com/r/popular/best.json?sr_detail=true', {
-            // headers: {Authorization: `bearer ${token}`}
+            // headers: {Authorization: `bearer ${st}`}
         })
             .then((resp) => {
                 const postData = resp.data;
