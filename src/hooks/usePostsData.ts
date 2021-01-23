@@ -9,7 +9,7 @@ interface IPostData {
 
 export function usePostsData() {
     const [data, setData] = useState<IPostData>({})
-    const token = useSelector<RootState, string>(state => state.token);
+    const token = useSelector<RootState>(state => state.st.data?.token);
 
     useEffect(() => {
         axios.get('https://www.reddit.com/r/popular/best.json?sr_detail=true', {

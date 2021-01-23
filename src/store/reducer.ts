@@ -10,7 +10,6 @@ import {stReducer, TokenState} from "./st/reduser";
 
 export type RootState = {
     commentText: string;
-    token: string;
     me: MeState;
     st: TokenState;
 
@@ -18,7 +17,6 @@ export type RootState = {
 
 const initialState = {
     commentText: 'Привет SkillBox',
-    token: '',
     me: {
         loading: false,
         error: '',
@@ -37,23 +35,12 @@ export const updateComment: ActionCreator<AnyAction> = (text) => ({
     text
 })
 
-export const setToken: ActionCreator<AnyAction> = (token) => ({
-    type: SET_TOKEN,
-    token
-})
-
-
 export const rootReducer: Reducer<RootState> = (state = initialState, action) => {
     switch (action.type) {
         case UPDATE_COMMENT:
             return {
                 ...state,
                 commentText: action.text
-            };
-        case SET_TOKEN:
-            return {
-                ...state,
-                token: action.token
             };
         case ME_REQUEST:
         case ME_REQUEST_SUCCESS:

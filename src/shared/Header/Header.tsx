@@ -4,8 +4,7 @@ import {SearchBlock} from "./SearchBlock";
 import {ThreadTitle} from "./ThreadTitle";
 import {SortBlock} from "./SortBlock";
 import {useDispatch} from "react-redux";
-import {setToken} from "../../store/reducer";
-import {saveToken, stRequestAsync} from "../../store/st/actions";
+import {stRequestAsync} from "../../store/st/actions";
 
 export function Header() {
   const dispatch = useDispatch();
@@ -14,7 +13,6 @@ export function Header() {
 
     if (window.__token__) {
       dispatch(stRequestAsync())
-      dispatch(setToken(window.__token__))
     }
 
   }, [])
