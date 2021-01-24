@@ -10,12 +10,11 @@ export function Header() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-
     if (window.__token__) {
       dispatch(stRequestAsync())
     }
-
   }, [])
+
   return (
   <header className={styles.header}>
     <SearchBlock />

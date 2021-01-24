@@ -35,3 +35,12 @@
     border: none;
 }
 
+.button:disabled {
+    opacity: 0.5;
+    cursor: default;
+
+}
+
+.input[aria-invalid] {
+    border-color: red;
+}
