@@ -20,5 +20,6 @@ export const saveToken: ActionCreator<SaveTokenAction> = (data: ITokenData) => (
 
 
 export const stRequestAsync = (): ThunkAction<void, RootState, unknown, Action<string>> => (dispatch,getState) => {
-    dispatch(saveToken({token: window.__token__}))
+
+
 }
