@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from './title.css';
 import {Post} from "../../../../Post";
+import {Link} from "react-router-dom";
 
 // interface ITitleInterface {
 //   postHint: string;
@@ -36,18 +37,14 @@ interface ITitleInterface {
 }
 
 export function Title({title, post_hint}: ITitleInterface) {
-  const [isModalOpened, setIsModalOpened] = useState(false);
 
   return (
       <h2 className={styles.title}>
-          {post_hint === 'image' ? <span className={styles.postLink}>{title}</span> : <a onClick={() => {
-              setIsModalOpened(true)} } className={styles.postLink}>
-              {title}
-          </a> }
-
-        {isModalOpened && (
-            <Post onClose={() => {setIsModalOpened(false);}} />
-        )}
+          {post_hint === 'image' ? <span className={styles.postLink}>{title}</span> :
+              <Link to="/posts/1" className={styles.postLink}>
+                  {title}
+              </Link>
+          }
       </h2>
   );
 }
