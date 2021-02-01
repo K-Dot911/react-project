@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import ReactDom from 'react-dom';
 import styles from './post.css';
-import moment from "moment";
 import {Comment} from "../Comment";
 import {CommentFormContainer} from "../CommentFormContainer";
 

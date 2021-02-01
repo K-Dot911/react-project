@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 import {useSelector} from "react-redux";
 import {RootState} from "../store/reducer";
@@ -13,7 +13,6 @@ export function usePostsData() {
 
     useEffect(() => {
         axios.get('https://www.reddit.com/r/popular/best.json?sr_detail=true', {
-            // headers: {Authorization: `bearer ${st}`}
         })
             .then((resp) => {
                 const postData = resp.data;

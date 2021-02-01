@@ -32,17 +32,18 @@ import {Post} from "../../../../Post";
 
 interface ITitleInterface {
     title: string;
+    post_hint: string;
 }
 
-export function Title({title}: ITitleInterface) {
+export function Title({title, post_hint}: ITitleInterface) {
   const [isModalOpened, setIsModalOpened] = useState(false);
 
   return (
       <h2 className={styles.title}>
-       <span className={styles.postLink}>{title}</span> : <a onClick={() => {
-          setIsModalOpened(true)} } className={styles.postLink}>
-          Title
-        </a>
+          {post_hint === 'image' ? <span className={styles.postLink}>{title}</span> : <a onClick={() => {
+              setIsModalOpened(true)} } className={styles.postLink}>
+              {title}
+          </a> }
 
         {isModalOpened && (
             <Post onClose={() => {setIsModalOpened(false);}} />

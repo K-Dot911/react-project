@@ -1,8 +1,6 @@
 import {Action, ActionCreator} from "redux";
 import {ThunkAction} from "redux-thunk";
 import {RootState} from "../reducer";
-import axios from "axios";
-import {meRequest, meRequestError, meRequestSuccess} from "../me/actions";
 
 export interface ITokenData {
     token?: string;

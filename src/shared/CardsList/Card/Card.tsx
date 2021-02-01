@@ -1,51 +1,28 @@
 import React, {useContext} from 'react';
 import styles from './card.css';
 import {TextContent} from "./TextContent"
-import {Menu} from "./Menu";
 import {Controls} from "./Controls";
-import {Dropdown} from "../../Dropdown";
-import {MenuIcon} from "../../Icons";
-import {MenuListItem} from "./Menu/MenuListItem";
-
-//
-// export function Card({postData}: ICardsProps) {
-//     return (
-//         <li className={styles.card}>
-//             <TextContent avatarUrl={postData.sr_detail.header_img}
-//                          avatarAlt={postData.sr_detail.display_name}
-//                          authorName={postData.author}
-//                          postDate={postData.created_utc}
-//                          postTitle={postData.title}
-//                          postUrl={postData.url}
-//                          postHint={postData.post_hint}
-//                          postKarma={postData.ups}
-//
-//             />
-//             <div className={styles.preview}>
-//                 {postData.post_hint === 'image' ? <img className={styles.previewImg} src={postData.url} /> : <img className={styles.previewImg} src='https://linkbuilder.su/images/uploads/glossary/ssilka.jpg'/>}
-//             </div>
-//             <Menu />
-//             <Controls postComments={postData.num_comments}
-//                       postKarma={postData.ups}
-//             />
-//         </li>
-//     );
-// }
-
+import {Menu} from "./Menu";
 
 interface ICardsProps {
     title: string;
+    created: string;
+    author: string;
+    url: string;
+    post_hint: string;
+    num_comments: number;
+    ups: number;
 }
 
-export function Card({title}: ICardsProps) {
+export function Card({title, created, author, url, post_hint, num_comments, ups}: ICardsProps) {
     return (
         <li className={styles.card}>
-            <TextContent title={title}/>
+            <TextContent title={title} author={author} created={created} post_hint={post_hint}/>
             <div className={styles.preview}>
-            <img className={styles.previewImg} src='https://linkbuilder.su/images/uploads/glossary/ssilka.jpg'/>
+                {post_hint === 'image' ? <img className={styles.previewImg} src={url} /> : <img className={styles.previewImg} src='https://linkbuilder.su/images/uploads/glossary/ssilka.jpg'/>}
             </div>
-            {/*<Menu />*/}
-            <Controls/>
+            <Menu />
+            <Controls num_comments={num_comments} ups={ups}/>
         </li>
     );
 }
