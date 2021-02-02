@@ -9,3 +9,17 @@
 .cardsList {
     background-color: var(--white);
 }
+
+.button {
+    display: block;
+    margin: 20px auto 50px;
+    padding: 10px;
+    border-radius: 4px;
+    background: var(--orange);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--white);
+    border: none;
+}

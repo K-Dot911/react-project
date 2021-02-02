@@ -1,15 +1,9 @@
 .menu {
-    position: absolute;
+    /*position: absolute;*/
     top: 17px;
     right: 15px;
     padding: 0;
-}
-
-@media all and (min-width: 1024px) {
-    .menu {
-        position: relative;
-        margin-top: 40px;
-    }
+    margin-bottom: 341px;
 }
 
 .menuButton {
@@ -32,9 +26,12 @@
 }
 
 @media all and (min-width: 1024px) {
+    .menu {
+        margin-bottom: 207px;
+    }
+
     .menuButton {
         right: 80px;
-        top: calc(50% - 16px);
         transform: rotate(180deg);
     }
 }
