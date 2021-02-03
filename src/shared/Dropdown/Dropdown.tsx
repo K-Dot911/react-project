@@ -9,18 +9,19 @@ interface IDropDownProps {
     onClose?: () => void;
 }
 
-const NOOP = () => {}
+const NOOP = () => {
+}
 
 export function Dropdown({button, children, isOpen, onOpen = NOOP, onClose = NOOP}: IDropDownProps) {
 
     const [isDropDownOpen, setIsDropDownOpen] = React.useState(isOpen);
     React.useEffect(() => setIsDropDownOpen(isOpen), [isOpen]);
-    React.useEffect(() => isDropDownOpen  ? onOpen() : onClose(),[isDropDownOpen])
+    React.useEffect(() => isDropDownOpen ? onOpen() : onClose(), [isDropDownOpen])
 
     const handleOpe = () => {
-      if (isOpen === undefined) {
-        setIsDropDownOpen(!isDropDownOpen)
-      }
+        if (isOpen === undefined) {
+            setIsDropDownOpen(!isDropDownOpen)
+        }
     }
 
     return (

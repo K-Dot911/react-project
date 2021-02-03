@@ -4,24 +4,25 @@ import {SearchBlock} from "./SearchBlock";
 import {ThreadTitle} from "./ThreadTitle";
 import {SortBlock} from "./SortBlock";
 import {useDispatch} from "react-redux";
-import {saveToken, stRequestAsync} from "../../store/st/actions";
+import {saveToken} from "../../store/st/actions";
 
 export function Header() {
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (localStorage.getItem('token') != null) {
-      dispatch(saveToken({token: localStorage.getItem('token')}));
-    } else {
-      dispatch(saveToken({token: window.__token__}));
-      localStorage.setItem('token', window.__token__);
-    }
-  }, [])
-  return (
-  <header className={styles.header}>
-    <SearchBlock />
-    <ThreadTitle />
-    <SortBlock />
-  </header>
-  );
+    useEffect(() => {
+        dispatch(saveToken({token: window.__token__}));
+        // if (localStorage.getItem('token') != null) {
+        //     dispatch(saveToken({token: localStorage.getItem('token')}));
+        // } else {
+        //     dispatch(saveToken({token: window.__token__}));
+        //     localStorage.setItem('token', window.__token__);
+        // }
+    }, [])
+    return (
+        <header className={styles.header}>
+            <SearchBlock/>
+            <ThreadTitle/>
+            <SortBlock/>
+        </header>
+    );
 }

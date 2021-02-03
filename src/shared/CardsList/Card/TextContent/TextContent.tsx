@@ -23,9 +23,9 @@ export function TextContent({title, created, author, post_hint}: ITextContentInt
                 </div>
                 <span className={styles.createdAt}>
                          <span className={styles.publishedLabel}>опубликовано</span>
-                     {moment(created).format("DD-MM-YYYY h:mm:ss")}</span>
+                    {moment(created).format("DD-MM-YYYY h:mm:ss")}</span>
             </div>
-         <Title title={title} post_hint={post_hint}/>
+            <Title title={title} post_hint={post_hint}/>
         </div>
     );
 }

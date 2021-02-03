@@ -2,12 +2,9 @@
  * @jest-enviroment jsdom
  */
 
-
 import React from "react";
 import {Dropdown} from "../Dropdown";
 import {shallow} from "enzyme";
-
-
 
 describe('Dropdown', function () {
     test('should render', () => {
@@ -20,6 +17,4 @@ describe('Dropdown', function () {
         const wrapper = shallow(<Dropdown children={<div/>} button={<button/>}/>)
         expect(wrapper).toMatchSnapshot()
     })
-
-
 });

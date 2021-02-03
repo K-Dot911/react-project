@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import styles from './card.css';
 import {TextContent} from "./TextContent"
 import {Controls} from "./Controls";
@@ -19,9 +19,11 @@ export function Card({title, created, author, url, post_hint, num_comments, ups}
         <li className={styles.card}>
             <TextContent title={title} author={author} created={created} post_hint={post_hint}/>
             <div className={styles.preview}>
-                {post_hint === 'image' ? <img className={styles.previewImg} src={url} /> : <img className={styles.previewImg} src='https://linkbuilder.su/images/uploads/glossary/ssilka.jpg'/>}
+                {post_hint === 'image' ? <img className={styles.previewImg} src={url}/> :
+                    <img className={styles.previewImg}
+                         src='https://linkbuilder.su/images/uploads/glossary/ssilka.jpg'/>}
             </div>
-            <Menu />
+            <Menu/>
             <Controls num_comments={num_comments} ups={ups}/>
         </li>
     );

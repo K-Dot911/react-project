@@ -24,7 +24,7 @@ interface ITextProps {
     tabletSize?: TSizes;
     desktopSize?: TSizes;
     color?: EColors;
-    bold? : boolean;
+    bold?: boolean;
 }
 
 export function Text(props: ITextProps) {
@@ -49,7 +49,7 @@ export function Text(props: ITextProps) {
     );
 
     return (
-        <As className = {classes}>
+        <As className={classes}>
             {children}
         </As>
     );

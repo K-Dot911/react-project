@@ -66,9 +66,9 @@ export function CardsList() {
 
     return (
         <ul className={styles.cardsList}>
-          {posts.length === 0 && !errorLoading && !loading && (
-              <div style={{textAlign: "center"}}>Empty list of posts</div>
-          )}
+            {posts.length === 0 && !errorLoading && !loading && (
+                <div style={{textAlign: "center"}}>Empty list of posts</div>
+            )}
 
             {posts.map(post => (
                 <Card
@@ -87,7 +87,9 @@ export function CardsList() {
             <div ref={bottomOfList}/>
             {loading && <div style={{textAlign: "center"}}>Loading...</div>}
             {errorLoading && <div style={{textAlign: "center"}} role="alert">{errorLoading}</div>}
-            {loadMoreButton && <button onClick={() => {setLoadMoreButton(false)}} className={styles.button}>Загрузить еще</button>}
+            {loadMoreButton && <button onClick={() => {
+                setLoadMoreButton(false)
+            }} className={styles.button}>Загрузить еще</button>}
         </ul>
 
     );

@@ -1,35 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './title.css';
-import {Post} from "../../../../Post";
 import {Link} from "react-router-dom";
-
-// interface ITitleInterface {
-//   postHint: string;
-//   postTitle: string;
-//   postUrl: string;
-//   avatarUrl: string;
-//   avatarAlt: string;
-//   authorName: string;
-//   postDate: string;
-//   postKarma: number;
-// }
-//
-// export function Title({postHint, postTitle, authorName, avatarAlt, avatarUrl, postDate, postKarma}: ITitleInterface) {
-//   const [isModalOpened, setIsModalOpened] = useState(false);
-//
-//   return (
-//       <h2 className={styles.title}>
-//         {postHint === 'image' ? <span className={styles.postLink}>{postTitle}</span> : <a onClick={() => {
-//           setIsModalOpened(true)} } className={styles.postLink}>
-//           {postTitle}
-//         </a> }
-//
-//         {isModalOpened && (
-//             <Post onClose={() => {setIsModalOpened(false);}} authorName={authorName} avatarUrl={avatarUrl} avatarAlt={avatarAlt} postDate={postDate} postKarma={postKarma} postTitle={postTitle} />
-//         )}
-//       </h2>
-//   );
-// }
 
 interface ITitleInterface {
     title: string;
@@ -38,13 +9,13 @@ interface ITitleInterface {
 
 export function Title({title, post_hint}: ITitleInterface) {
 
-  return (
-      <h2 className={styles.title}>
-          {post_hint === 'image' ? <span className={styles.postLink}>{title}</span> :
-              <Link to="/posts/1" className={styles.postLink}>
-                  {title}
-              </Link>
-          }
-      </h2>
-  );
+    return (
+        <h2 className={styles.title}>
+            {post_hint === 'image' ? <span className={styles.postLink}>{title}</span> :
+                <Link to="/posts/1" className={styles.postLink}>
+                    {title}
+                </Link>
+            }
+        </h2>
+    );
 }

@@ -9,10 +9,10 @@ type Props = {
 
 export function CommentForm({value, onChange, onSubmit}: Props) {
 
-  return (
-    <form className={styles.form} onSubmit={onSubmit}>
-      <textarea className={styles.input} value={value} onChange={onChange}/>
-      <button type="submit" className={styles.button}>Комментировать</button>
-    </form>
-  );
+    return (
+        <form className={styles.form} onSubmit={onSubmit}>
+            <textarea className={styles.input} value={value} onChange={onChange}/>
+            <button type="submit" className={styles.button}>Комментировать</button>
+        </form>
+    );
 }

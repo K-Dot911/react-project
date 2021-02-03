@@ -10,7 +10,7 @@ const app = express();
 
 app.use('/static', express.static('./dist/client'));
 
-app.get('/auth', (req, res)=> {
+app.get('/auth', (req, res) => {
 
     axios.post(
         'https://www.reddit.com/api/v1/access_token',
@@ -21,7 +21,7 @@ app.get('/auth', (req, res)=> {
 
         }
     )
-        .then(( {data} ) => {
+        .then(({data}) => {
             res.send(
                 indexTemplate(ReactDOM.renderToString(App()), data['access_token']),
             );
@@ -29,12 +29,12 @@ app.get('/auth', (req, res)=> {
         .catch((e) => console.log(e))
 })
 
-app.get('*', (req, res)=> {
+app.get('*', (req, res) => {
     res.send(
         indexTemplate(ReactDOM.renderToString(App())),
     );
 })
 
-app.listen(PORT, ()=> {
+app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`)
 })

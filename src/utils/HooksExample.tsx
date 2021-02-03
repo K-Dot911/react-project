@@ -13,7 +13,7 @@
 
 import React from "react";
 
-export function MyHooks({title} : {title: string}) {
+export function MyHooks({title}: { title: string }) {
     React.useEffect(() => {
         console.log('componentDidMount');
         console.log('componentDidUpdate');
@@ -38,7 +38,7 @@ export function MyHooks({title} : {title: string}) {
 
 //Пример использования useMemo (Схожая логика работы как и useEffect, вызывается 1 раз и спользуется для вычеслений)
 
-export function MyHooksMemo({title, id} : {title: string, id?: string}) {
+export function MyHooksMemo({title, id}: { title: string, id?: string }) {
     const items = 10
     const multiplier = 5
     const result = React.useMemo(
@@ -61,7 +61,7 @@ function calculate(items: number, multiplaer: number) {
 //Пример кастомного Хука (Принято называть хук с слова use)
 
 export function useIsMounted() {
-    const [isMounted, setIsMounted ] = React.useState(false);
+    const [isMounted, setIsMounted] = React.useState(false);
 
     React.useEffect(() => {
         setIsMounted(true);

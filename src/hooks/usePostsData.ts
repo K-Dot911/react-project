@@ -12,8 +12,7 @@ export function usePostsData() {
     const token = useSelector<RootState>(state => state.st.data?.token);
 
     useEffect(() => {
-        axios.get('https://www.reddit.com/r/popular/best.json?sr_detail=true', {
-        })
+        axios.get('https://www.reddit.com/r/popular/best.json?sr_detail=true', {})
             .then((resp) => {
                 const postData = resp.data;
                 setData({posts: postData.data.children});

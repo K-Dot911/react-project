@@ -8,12 +8,11 @@ import {CardsList} from "./shared/CardsList";
 import {UserContextProvider} from "./shared/context/userContext";
 import {PostContextProvider} from "./shared/context/postsContext";
 import {applyMiddleware, createStore} from "redux";
-import {Provider, useDispatch} from "react-redux";
+import {Provider} from "react-redux";
 import {composeWithDevTools} from "redux-devtools-extension";
 import {rootReducer} from "./store/reducer";
 import thunk from "redux-thunk";
 import {BrowserRouter, Route} from "react-router-dom";
-import {saveToken, stRequestAsync} from "./store/st/actions";
 import {Post} from "./shared/Post";
 
 const store = createStore(rootReducer, composeWithDevTools(
@@ -39,7 +38,7 @@ function AppComponent() {
                                 <Content>
                                     <CardsList/>
                                     <Route path="/posts/:id">
-                                        <Post />
+                                        <Post/>
                                     </Route>
                                 </Content>
                             </Layout>

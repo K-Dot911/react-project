@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import styles from './post.css';
 import {Comment} from "../Comment";
 import {CommentFormContainer} from "../CommentFormContainer";
-import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 export function Post() {
     const ref = useRef<HTMLDivElement>(null);
