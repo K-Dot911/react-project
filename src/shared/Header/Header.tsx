@@ -10,13 +10,14 @@ export function Header() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(saveToken({token: window.__token__}));
-        // if (localStorage.getItem('token') != null) {
-        //     dispatch(saveToken({token: localStorage.getItem('token')}));
-        // } else {
-        //     dispatch(saveToken({token: window.__token__}));
-        //     localStorage.setItem('token', window.__token__);
-        // }
+        if (localStorage.getItem('token') !== 'undefined') {
+            dispatch(saveToken({token: localStorage.getItem('token')}));
+        } else if (window.__token__ && window.__token__.length > 10) {
+            dispatch(saveToken({token: window.__token__}));
+            localStorage.setItem('token', window.__token__);
+        } else {
+            console.log('Token is empty')
+        }
     }, [])
     return (
         <header className={styles.header}>
