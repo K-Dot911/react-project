@@ -10,14 +10,7 @@ export function Header() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (localStorage.getItem('token') !== 'undefined') {
-            dispatch(saveToken({token: localStorage.getItem('token')}));
-        } else if (window.__token__ && window.__token__.length > 10) {
-            dispatch(saveToken({token: window.__token__}));
-            localStorage.setItem('token', window.__token__);
-        } else {
-            console.log('Token is empty')
-        }
+        dispatch(saveToken({token: window.__token__}));
     }, [])
     return (
         <header className={styles.header}>
